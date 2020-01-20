@@ -1,0 +1,803 @@
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/titillium-web-v7-latin-300.eot'); /* IE9 Compat Modes */
+    src: local('Titillium Web Light'), local('TitilliumWeb-Light'),
+    url('../fonts/titillium-web-v7-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/titillium-web-v7-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-300.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/titillium-web-v7-latin-300.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+/* titillium-web-regular - latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/titillium-web-v7-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'),
+    url('../fonts/titillium-web-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/titillium-web-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/titillium-web-v7-latin-regular.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+/* titillium-web-600 - latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/titillium-web-v7-latin-600.eot'); /* IE9 Compat Modes */
+    src: local('Titillium Web SemiBold'), local('TitilliumWeb-SemiBold'),
+    url('../fonts/titillium-web-v7-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/titillium-web-v7-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-600.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/titillium-web-v7-latin-600.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+/* titillium-web-700 - latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/titillium-web-v7-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Titillium Web Bold'), local('TitilliumWeb-Bold'),
+    url('../fonts/titillium-web-v7-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/titillium-web-v7-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/titillium-web-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/titillium-web-v7-latin-700.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #b7b7b7 !important;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #b7b7b7 !important;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #b7b7b7 !important;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #b7b7b7 !important;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    border-color: none;
+    box-shadow:none;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+    box-shadow: inset 0 -1px 0 #ddd;
+    outline:0px !important;
+}
+
+textarea:hover,
+textarea:active,
+textarea:focus,
+input:hover,
+input:active,
+input:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    border: none;
+    -webkit-appearance:none;
+}
+
+body {
+    background: #fbfbfb;
+    font-family: 'Titillium Web', sans-serif;
+}
+.top-head-fix {
+    background-color: #FFF;
+    border: 0;
+    margin-bottom: 0;
+    padding: 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+.top-logo-head {
+    line-height: 60px;
+    height: 60px;
+    width: 142px;
+    background-image: url(../images/hdfc-logo.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 85%;
+    padding: 0 20px;
+    margin: 0;
+    display: block;
+}
+.name-first {
+    background-color: #c62828;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    height: 37px;
+    width: 37px;
+    text-align: center;
+    display: inline-block;
+    font-weight: 500;
+    line-height: 34px;
+}
+.toggle-new {
+    background-color: transparent !important;
+    color: #000 !important;
+    font-weight: 500;
+    border: none;
+}
+.main_bg {
+    background-image: url(../images/main_bg.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    padding: 3% 2%;
+}
+.main_card{
+    background-color: white;
+    min-height: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0);
+    background-image: url(../images/main_card_bg.png);
+    background-size: cover;
+}
+.main_card_inner{
+    background-color: white;
+    min-height: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0);
+}
+.sub_title{
+    color: #08334e;
+    font-size: 2em;
+    font-weight: 500;
+}
+.main_title{
+    color: #08334e;
+    font-size: 2.4em;
+    font-weight: 600;
+}
+.loan_info_text {
+    color: #08334e;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: justify;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+.main_btn_common{
+    text-align: center;
+    border-radius: 50px;
+    background-color: #f72805;
+    color: white;
+    display: inline-block;
+    padding: 14px 50px;
+    font-weight: 600;
+    font-size: 1.2em;
+    box-shadow: 0px 5px 15px 1px #ed1c2452;
+    border: none;
+    margin-right: 10px;
+}
+.left_panel_Convert{
+    position: relative;
+    top: 20vh;
+    padding: 0px 7%;
+}
+.modal {
+    top: 12vh;
+}
+.otp_title {
+    color: #08334e;
+    font-weight: 800;
+    font-size: 1.4em;
+    text-align: center;
+}
+.otp_sub_title {
+    color: #08334e;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+.otp_title_sml{
+    font-size: 0.70em;
+    font-weight: 500;
+}
+.title_otp_text{
+    font-size: 1em;
+    font-weight: 500;
+}
+.check_adj{
+    padding-left: 80px;
+    padding-right: 90px;
+    text-align: left;
+}
+.radio_main_lbl{
+    font-size: 18px;
+    margin-bottom: 9px;
+}
+.OTP_input_div{
+    margin: 0 auto;
+    padding-left: 8px;
+    text-align: center;
+}
+.otp_input{
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 15px;
+    margin-left: 18px;
+}
+.lbl-radio {
+    color: #9c9d9d;
+    font-size: 16px;
+    font-style: normal;
+    padding-left: 10px;
+}
+.lbl_blue {
+    color: #08334e;
+    font-weight: 600;
+}
+.OTP-form-control {
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.OTP-form-control:hover, .OTP-form-control:focus{
+    border: 1px solid #ced4da;
+}
+.custom-control {
+    margin-top: 12px;
+}
+.OTP_exp{
+    color: #fd0000;
+    font-weight: 500;
+}
+.cancel {
+    font-size: 1.1em;
+    color: #4ba4df;
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.otp_resend{
+    cursor: pointer;
+}
+.OTP_div{
+    /*display:none;*/
+}
+.contact_head {
+    width: 100%;
+    display: flex;
+    background: rgb(238,34,36);
+    background: linear-gradient(180deg, rgba(238,34,36,1) 0%, rgba(232,33,35,1) 100%);
+    min-height: 73px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.contact_head div:nth-child(2) {
+    flex: 3;
+}
+.contact_head div:nth-child(2) {
+    flex: 2;
+}
+.contact_head div {
+    flex: 1;
+}
+.acc_number{
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px 15px;
+    color: #0c3650;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 16px;
+}
+.w700{
+    font-weight: 700;
+}
+.contact_head_lbl {
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+}
+.contact_head_val {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.conv_main_box {
+    padding: 40px;
+    box-sizing: border-box;
+}
+.conv_title {
+    color: #08334e;
+    font-weight: 500;
+    font-size: 1.6em;
+}
+.bold{
+    font-weight: bold;
+}
+.conv_main_box p{
+    color: #08334e;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: justify;
+}
+.Conversion_details_box {
+    margin: 50px 4em;
+    min-height: 220px;
+    border: 1px solid #c4c4c4;
+    border-radius: 15px;
+    padding: 20px;
+    background: rgb(247,247,247);
+    background: linear-gradient(90deg, rgba(247,247,247,1) 0%, rgba(254,254,254,1) 100%);
+}
+.current_plan_val{
+    color: #08334e;
+    font-weight: 700;
+    font-size: 1.6em;
+}
+.current_plan_lbl {
+    color: #08334e;
+    font-weight: 500;
+    font-size: 1em;
+}
+.Conversion_details_box .col-lg-3 {
+    padding-left: 3em;
+}
+.middle_line {
+    border-top: 1px solid #c4c4c4;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.col_blue{
+    color: #4ba4df;
+}
+.refresh_box{
+    position: absolute;
+    margin-top: -30px;
+    background-color: white;
+    padding: 10px;
+    right: 23vh;
+}
+.save_info_details{
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: center;
+    color: #08334e;
+}
+.font18{
+    font-size: 1.8em;
+}
+.inr_icon{
+    position: relative;
+    top: -2px;
+}
+img.inr_icon_sm {
+    width: 11px;
+    position: relative;
+    top: -1px;
+}
+p.sml_text {
+    color: #08334e;
+    font-weight: 400;
+    font-size: 0.75em;
+    margin-top: 10px;
+    text-align: justify;
+}
+.summery_left_card{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px 2px rgba(0, 0, 0, 0.09), 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+.summery_lbl {
+    color: #08334e;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+.summery_val {
+    color: #4ba4df;
+    font-weight: 700;
+    font-size: 1.6em;
+}
+.summery_left_card .row {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.taxes{
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #000000;
+}
+.Condition_title {
+    color: #08334e;
+    font-weight: 700;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.term_first_text {
+    color: #08334e;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.term_sec_text {
+    color: #08334e;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1em;
+    line-height: 30px;
+}
+.condition_text{
+    color: #5cabe1;
+    font-style: italic;
+    font-size: 0.85em;
+    line-height: 22px;
+}
+.payment_success{
+    display: none;
+}
+.payment_error{
+    display: none;
+}
+.payment_success{
+    text-align: center;
+    margin-top: 15px;
+}
+.payment_success h3 {
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: #08334e;
+    font-size: 1.8em;
+}
+.payment_success p {
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: #08334e;
+    font-size: 1.2em;
+    padding: 0px 14em;
+    text-align: center;
+}
+
+.payment_error h3 {
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: #08334e;
+    font-size: 1.8em;
+}
+.payment_error p {
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: #08334e;
+    font-size: 1.2em;
+    padding: 0px 14em;
+    text-align: center;
+}
+.payment_tran {
+    width: 400px;
+    background-color: #f8f8f8;
+    margin: auto;
+    border: 1px solid #c4c4c4;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+.payment_val {
+    color: #08334e;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+.payment_lbl {
+    color: #08334e;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+.text_note {
+    color: #4ba4df;
+    font-weight: 400;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.btn-general{
+    font-size: 1.1em;
+    color: #4ba4df !important;
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* ------- Account List radio button ------- */
+.custom-radio .custom-control-label::before {
+    width: 1.3rem;
+    height: 1.3rem;
+    top: 0rem;
+}
+.custom-radio .custom-control-label::after {
+    width: 1.3rem;
+    height: 1.3rem;
+    top: 0rem;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #f72400;
+    background-color: #f72400;
+}
+
+
+/* ------- verify opt pin code format ------- */
+.form-control.pincode-input-text, .pincode-input-text {
+    width: 80px;
+    float: left;
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 30px;
+    border: 1px solid #b3b3b3;
+}
+.pincode-input-container input.last, .pincode-input-container input.mid {
+    border-left-width: 1px;
+}
+
+
+.error_lbl {
+    color: red;
+}
+
+/* modal pop up overlay issue */
+.modal{
+    z-index: 990 !important;
+}
+
+.modal-backdrop{
+    z-index: 924 !important;
+}
+
+
+.red-color {
+    color: red;
+    text-shadow: none;
+    font-weight: 500;
+    font-family: "Titillium Web", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+/* ---------------------media query ------------------------------*/
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1224px) {
+
+
+}
+
+@media only screen and (max-width: 1324px) {
+
+
+}
+
+@media only screen and (max-width: 1424px) {
+
+    .left_panel_Convert {
+        top: 12vh;
+        padding: 0px 3vh;
+    }
+    .sub_title {
+        font-size: 1.8em;
+    }
+    .main_title {
+        font-size: 2.2em;
+    }
+    .loan_info_text {
+        font-size: 1em;
+    }
+    .conv_main_box p {
+        font-size: 1em;
+    }
+    .current_plan_val {
+        font-size: 1.4em;
+    }
+    .Conversion_details_box .col-lg-3 {
+        padding-left: 1em;
+    }
+    .refresh_box {
+        right: 28vh;
+    }
+    .contact_head_val {
+        font-size: 1.1em;
+    }
+    .acc_number {
+        padding: 5px 8px;
+        font-size: 1em;
+    }
+    .save_info_details {
+        font-size: 1.2em;
+    }
+    .summery_lbl {
+        font-size: 1.2em;
+    }
+    .summery_val {
+        font-size: 1.4em;
+    }
+    .Condition_title {
+        font-size: 1.2em;
+    }
+    .term_first_text {
+        font-size: 1em;
+    }
+
+}
+
+@media only screen and (max-width: 1524px) {
+
+
+}
+
+@media only screen and (max-width: 1724px) {
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .round_icon {
+        display: none !important;
+    }
+    .left_panel_Convert {
+        top: 7vh;
+        padding: 0px 1vh;
+    }
+    .otp_input {
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 15px;
+    }
+    .main_card_inner {
+        margin-top: 60px;
+    }
+    .contact_head div {
+        flex: none;
+    }
+    .contact_head div:nth-child(2) {
+        flex: none;
+    }
+    .contact_head {
+        display: block;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+    .conv_main_box {
+        padding: 20px;
+    }
+    .Conversion_details_box {
+        margin:0px;
+    }
+    .Conversion_details_box .col-lg-3 {
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+    .refresh_box {
+        position: absolute;
+        margin-top: -24px;
+        background-color: white;
+        padding: 4px;
+        right: 19vh;
+    }
+    .save_info_details {
+        margin-top: 25px;
+    }
+    .payment_success p {
+        padding: 0px !important;
+    }
+    .payment_error p {
+        padding: 0px !important;
+    }
+    .payment_tran {
+        width: auto !important;
+    }
+    .payment_lbl {
+        font-size: 1em;
+    }
+
+}
